@@ -12,7 +12,6 @@ before_script:
   - psql -c "CREATE DATABASE mydb;" -U postgres
   - psql -c "CREATE USER myuser WITH PASSWORD 'password';" -U postgres
   - psql -c "ALTER USER myuser CREATEDB;" -U postgres
-  - python manage.py migrate
 
 addons:
   postgresql: "9.6"
