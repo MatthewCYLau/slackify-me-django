@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .form import InputMessageForm
 from django.http import HttpResponseRedirect
 import requests
+import os
 
 # Create your views here.
 
@@ -12,7 +13,13 @@ def home(request):
 
     if request.method == "POST":
 
-        auth_token = 'xoxp-140168250439-479776639701-681206313383-915e615b692a685f379ad58b8bbde108'
+        if 'RDS_HOSTNAME' in os.environ:
+
+            auth_token = os.environ['SLACK_AUTH_TOKEN']
+
+        else:
+            pass
+
         payload = {'channel': 'CJGGJBSNM', 'text': request.POST['body']}
         hed = {'Authorization': 'Bearer ' + auth_token}
 
