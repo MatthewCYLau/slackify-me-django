@@ -19,6 +19,6 @@ import message.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', message.views.home, name='home'),
     path('message/', include('message.urls')),
+    path('', message.views.home, name='home'),
 ]

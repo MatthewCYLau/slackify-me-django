@@ -4,5 +4,7 @@ from .import views
 
 urlpatterns = [
 
-    path('', views.form, name='form'),
+    path('', views.home, name='home'),
+    path('confirm', views.confirm, name='confirm'),
+
 ]
