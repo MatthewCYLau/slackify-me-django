@@ -3,7 +3,7 @@ from .models import InputMessage
 
 
 CHANNEL_CHOICES= [
-    ('CJGGJBSNM', 'SE Hackathon 2019'),
+    ('DE2QP24U8', 'Slackbot'),
     ]
 
 
