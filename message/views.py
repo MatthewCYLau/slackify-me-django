@@ -20,7 +20,7 @@ def home(request):
         else:
             pass
 
-        payload = {'channel': 'CJGGJBSNM', 'text': request.POST['body']}
+        payload = {'channel': request.POST['channel'], 'text': request.POST['body']}
         hed = {'Authorization': 'Bearer ' + auth_token}
 
         r = requests.post("https://slack.com/api/chat.postMessage", data=payload, headers=hed)
