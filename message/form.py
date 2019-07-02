@@ -4,6 +4,7 @@ from .models import InputMessage
 
 CHANNEL_CHOICES= [
     ('DE2QP24U8', 'Slackbot'),
+    ('GK08B28MQ', 'SlackifyMe Team Channel'),
     ]
 
 
