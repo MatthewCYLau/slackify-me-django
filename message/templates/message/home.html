@@ -1,24 +1,22 @@
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
 
-    {% block content%}
+{% block content%}
+{% load staticfiles %}
 
-        <section class="jumbotron text-center">
+<div class="container">
 
-            <div class="container">
-              <h1 class="jumbotron-heading">Album example</h1>
-              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p
-            </div>
+        <br/>
 
-            <div class="container text-left">
+            <h1 class="jumbotron-heading">Slackify Your Message</h1>
 
-                    <form method="post">
-                            {% csrf_token%}
-                            {{ form.as_p}}
-                        <input class="btn btn-primary" type = 'submit' value = 'Send'/>
-                    </form>
+              <p class="lead text-muted">Compose a message for your favourite Systems Engineering Slack channel. Make it short and sweet. Our app will do the rest by adding all the fun &#128540 &#128514 &#128525; </p
 
             </div>
 
-        </section>
+            <form method="post">
+                    {% csrf_token%}
+                    {{ form.as_p}}
+                <input class="btn btn-primary" type = 'submit' value = 'Send'/>
+            </form>
 
-    {% endblock%}
+{% endblock%}
