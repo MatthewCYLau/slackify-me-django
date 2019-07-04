@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .form import InputMessageForm
+from .models import InputMessage
 from django.http import HttpResponseRedirect
 import requests
 import os
@@ -22,16 +23,22 @@ def home(request):
             auth_token = os.environ['SLACK_AUTH_TOKEN']
 
         else:
-            pass
+            auth_token = ""
 
-        payload = {'channel': request.POST['channel'], 'text': request.POST['body']}
+        output_message = add_emojis(request.POST['body'], 1)
+
+        payload = {'channel': request.POST['channel'], 'text': output_message}
         hed = {'Authorization': 'Bearer ' + auth_token}
 
-        r = requests.post("https://slack.com/api/chat.postMessage", data=payload, headers=hed)
+        requests.post("https://slack.com/api/chat.postMessage", data=payload, headers=hed)
 
-        form.save()
+        inputMessage = InputMessage()
+        inputMessage.body = output_message
+        inputMessage.channel = request.POST['channel']
+        inputMessage.name = request.POST['name']
+        inputMessage.save()
 
-        return HttpResponseRedirect('message/confirm')
+        return render(request, 'message/confirm.html', {'inputMessage': inputMessage})
 
     context = {
 
@@ -39,6 +46,13 @@ def home(request):
     }
 
     return render(request, 'message/home.html', context)
+
+
+def add_emojis(input_text, magnitude_factor):
+
+    output = ("\U0001f92A" * magnitude_factor)+input_text
+
+    return output
 
 
 def confirm(request):
