@@ -17,7 +17,6 @@
                     {% csrf_token%}
                     {% load widget_tweaks %}
                     {% for field in form %}
-
                     <div class = "form-group {% if field.errors %} alert alert-danger {% endif %}">
                         {{ field.errors }}
                         {% render_field field class="form-control" %}
