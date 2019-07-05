@@ -6,5 +6,6 @@ from django.db import models
 class InputMessage(models.Model):
 
     name = models.CharField(max_length=50)
-    channel = models.CharField(max_length=50)
     body = models.CharField(max_length=100)
+    channel = models.CharField(max_length=50)
+
