@@ -9,6 +9,7 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 # Create your views here.
