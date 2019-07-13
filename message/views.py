@@ -40,6 +40,15 @@ def home(request):
         inputMessage.channel = request.POST['channel']
         inputMessage.name = request.POST['name']
         inputMessage.pub_date = timezone.datetime.now()
+
+        if request.user.is_authenticated:
+            inputMessage.user = request.user
+        elif User.objects.filter(username='default_user').exists():
+            inputMessage.user = User.objects.get(username='default_user')
+        else:
+            User.objects.create(username='default_user', password = 'Django1234!!')
+            inputMessage.user = User.objects.get(username='default_user')
+
         inputMessage.save()
 
         return render(request, 'message/confirm.html', {'inputMessage': inputMessage})
@@ -64,7 +73,8 @@ def confirm(request):
 
 
 def dashboard(request):
-    return render(request, 'message/dashboard.html')
+    messages = InputMessage.objects.filter(user=request.user)
+    return render(request, 'message/dashboard.html', {'messages': messages})
 
 
 class SignUp(generic.CreateView):

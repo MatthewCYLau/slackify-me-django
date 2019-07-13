@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b0bf83f-bcfb-4921-99e0-8a1ddfe3de4b" name="Default Changelist" comment="" />
+    <list default="true" id="4b0bf83f-bcfb-4921-99e0-8a1ddfe3de4b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.ebextensions/db-makemigrate.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/message/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/templates/message/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/message/templates/message/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/message/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,32 +18,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/slackify/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.ebextensions/db-migrate.config">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.ebextensions/db-makemigrate.config">
+        <entry file="file://$PROJECT_DIR$/message/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.ebextensions/django.config">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -69,21 +61,22 @@
         <option value="$PROJECT_DIR$/message/urls.py" />
         <option value="$PROJECT_DIR$/slackify/urls.py" />
         <option value="$PROJECT_DIR$/slackify/templates/base.html" />
-        <option value="$PROJECT_DIR$/message/templates/message/dashboard.html" />
         <option value="$PROJECT_DIR$/message/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/message/templates/registration/signup.html" />
         <option value="$PROJECT_DIR$/static/admin/css/base.css" />
-        <option value="$PROJECT_DIR$/slackify/settings.py" />
         <option value="$PROJECT_DIR$/message/form.py" />
         <option value="$PROJECT_DIR$/message/templates/message/home.html" />
         <option value="$PROJECT_DIR$/message/templates/message/confirm.html" />
-        <option value="$PROJECT_DIR$/message/views.py" />
-        <option value="$PROJECT_DIR$/message/models.py" />
         <option value="$PROJECT_DIR$/.ebextensions/db-makemigrate.config" />
+        <option value="$PROJECT_DIR$/message/models.py" />
+        <option value="$PROJECT_DIR$/slackify/settings.py" />
+        <option value="$PROJECT_DIR$/message/views.py" />
+        <option value="$PROJECT_DIR$/message/templates/message/dashboard.html" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="785" />
@@ -114,25 +107,7 @@
             <path>
               <item name="slackify-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="slackify-project" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slackify-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slackify-project" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slackify-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slackify-project" type="462c0819:PsiDirectoryNode" />
               <item name="slackify" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slackify-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slackify-project" type="462c0819:PsiDirectoryNode" />
-              <item name="slackify" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,13 +213,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/message/templates/message/form.html" />
-    <entry file="file://$PROJECT_DIR$/message/templates/message/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" lean-forward="true" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/message/templates/registration/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -311,22 +279,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message/migrations/0002_auto_20190701_0820.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message/migrations/0004_auto_20190706_1016.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message/migrations/0003_auto_20190701_0821.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/message/migrations/0002_auto_20190701_0820.py" />
+    <entry file="file://$PROJECT_DIR$/message/migrations/0004_auto_20190706_1016.py" />
+    <entry file="file://$PROJECT_DIR$/message/migrations/0003_auto_20190701_0821.py" />
     <entry file="file://$PROJECT_DIR$/message/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -337,37 +292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/message/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -381,33 +309,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message/views.py">
+    <entry file="file://$PROJECT_DIR$/message/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/slackify/settings.py">
+    <entry file="file://$PROJECT_DIR$/.ebextensions/db-makemigrate.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.ebextensions/django.config">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/message/templates/message/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.ebextensions/db-migrate.config">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.ebextensions/db-makemigrate.config">
+    <entry file="file://$PROJECT_DIR$/message/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slackify/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

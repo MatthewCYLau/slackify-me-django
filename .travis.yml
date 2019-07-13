@@ -19,14 +19,14 @@ script:
 addons:
   postgresql: "9.6"
 
-deploy:
-  provider: elasticbeanstalk
-  access_key_id: $ACCESSKEYID
-  secret_access_key:
-    secure: "$SECRETACCESSKEY"
-  region: "us-west-2"
-  app: "slackify-project"
-  env: "dev-env"
-  bucket_name: "matlau.slackify"
-  on:
-    branch: master
+#deploy:
+#  provider: elasticbeanstalk
+#  access_key_id: $ACCESSKEYID
+#  secret_access_key:
+#    secure: "$SECRETACCESSKEY"
+#  region: "us-west-2"
+#  app: "slackify-project"
+#  env: "dev-env"
+#  bucket_name: "matlau.slackify"
+#  on:
+#    branch: master

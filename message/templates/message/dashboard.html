@@ -4,8 +4,14 @@
 
 <div class = "container">
     </br>
-     <h1 class="jumbotron-heading">Dashboard</h1>
+     <h1 class="jumbotron-heading">{{ user.username }}'s Dashboard</h1>
+     </br>
+    <h4>Historic Messages </h4>
 
+       {% for message in messages %}
+            <div class="card-body"><p class="card-text">{{message.body}}</br>{{message.pub_date}}
+            </div>
+        {% endfor %}
 
 </div>
 
