@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slackify/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="165">
+              <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -78,6 +78,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,7 +137,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/slackify/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
         </state>
       </provider>
     </entry>
