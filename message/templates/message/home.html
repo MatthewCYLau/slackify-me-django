@@ -3,27 +3,53 @@
 {% block content%}
 {% load staticfiles %}
 
-<div class="container text-center">
+<section id="title">
+  <div class="container-fluid">
 
-        <br/>
+    <nav class="navbar navbar-expand-md navbar-dark">
 
-            <h1 class="jumbotron-heading">Slackify Your Message</h1>
+      <a class="navbar-brand" href="{% url 'home' %}">Slackify Me!</a>
 
-              <p class="lead text-muted">Compose a message for your favourite Systems Engineering Slack channel. Make it short and sweet. Our app will do the rest by adding all the fun &#128540 &#128514 &#128525; </p
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-            <form method="post">
-                    {% csrf_token%}
-                    {% load widget_tweaks %}
-                    {% for field in form %}
-                    <div class = "form-group {% if field.errors %} alert alert-danger {% endif %}">
-                        {{ field.errors }}
-                        {% render_field field class="form-control" %}
-                    </div>
-                    {% endfor %}
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Try Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+          </li>
+        </ul>
 
-                <input class="btn btn-primary" type = 'submit' value = 'Send'/>
-            </form>
+      </div>
+    </nav>
+
+    <div class="row">
+
+      <div class="col-lg-7">
+        <h1 class="big-heading">Finally, millennials will read your messages. </h1>
+        <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i>
+          Download</button>
+      </div>
+
+      <div class="col-lg-5">
+        <img src="{% static 'smartphone.svg' %}" alt="iphone-mockup" class="title-image">
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 {% endblock%}

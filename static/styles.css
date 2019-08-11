@@ -69,10 +69,10 @@ p {
 
 /* Title Image */
 .title-image {
-  width: 60%;
-  transform: rotate(25deg);
+  width: 70%;
+  transform: rotate(250deg);
   position: absolute;
-  right: 30%;
+  right: 20%;
 }
 
 /* Features section */
