@@ -36,18 +36,27 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
                 <ul class="navbar-nav ml-auto">
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#footer">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Try Now</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="#cta">Login</a>
-                        </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cta">Sign Up</a>
-                    </li>
+                        <a class="nav-link" href="#tryNow">Try Now</a>
+                      </li>
+                      {% if user.is_authenticated %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                      </li>
+                      {% else %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                      </li>
+                      {% endif %}
+                      {% if user.is_authenticated == False %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                      </li>
+                      {% endif %}
                 </ul>
 
             </div>
