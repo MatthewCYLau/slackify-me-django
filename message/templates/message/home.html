@@ -105,43 +105,47 @@
     </div>
 
     <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" </span> </a>
+      <span class="carousel-control-prev-icon"></span> </a>
     <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" </span></span> </a> </div> </section> <!-- Press -->
+      <span class="carousel-control-next-icon"></span></a>
+  </div>
+</section>
 
 
-          <section id="tryNow">
+<section id="tryNow">
 
-              <h2>Try Now</h2>
+  <h2>Try It Now</h2>
+
+  <h3>Slackify Your Message Below</h3>
 
 
-            <form method="post">
-              {% csrf_token%}
-              {% load widget_tweaks %}
-              {% for field in form %}
-              <div class="form-group {% if field.errors %} alert alert-danger {% endif %}">
-                {{ field.errors }}
-                {% render_field field class="form-control" %}
-              </div>
-              {% endfor %}
+  <form class = "message-form" method="post">
+    {% csrf_token%}
+    {% load widget_tweaks %}
+    {% for field in form %}
+    <div class="form-group {% if field.errors %} alert alert-danger {% endif %}">
+      {{ field.errors }}
+      {% render_field field class="form-control" %}
+    </div>
+    {% endfor %}
 
-              <input class="btn btn-primary" type='submit' value='Send' />
-            </form>
+    <input class="btn btn-primary" type='submit' value='Send' />
+  </form>
 
-          </section>
+</section>
 
-          <!-- Call to Action -->
+<!-- Call to Action -->
 
-          <section id="cta">
-              <div class="container">
-                <h3 class="cta-heading">Find your destined emojis today.</h3>
-                <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
-                  Mobile App</button>
-                <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i>
-                  Coming Soon</button>
+<section id="cta">
+  <div class="container">
+    <h3 class="cta-heading">Find your destined emojis today</h3>
+    <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
+      Mobile App</button>
+    <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i>
+      Coming Soon</button>
 
-              </div>
+  </div>
 
-            </section>
+</section>
 
-          {% endblock%}
+{% endblock%}

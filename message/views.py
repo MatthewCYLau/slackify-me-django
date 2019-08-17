@@ -67,11 +67,6 @@ def add_emojis(input_text, magnitude_factor):
 
     return output
 
-
-def confirm(request):
-    return render(request, 'message/confirm.html')
-
-
 def dashboard(request):
     messages = InputMessage.objects.filter(user=request.user)
     return render(request, 'message/dashboard.html', {'messages': messages})
