@@ -31,6 +31,8 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
+To deactivate virtual environment, run `deactivate`
+
 ## Usage
 
 In the project root directory, run this command:
