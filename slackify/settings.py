@@ -25,7 +25,7 @@ SECRET_KEY = 'foo-bar'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dev-env.vmwquqkmft.us-west-2.elasticbeanstalk.com', '*']
+ALLOWED_HOSTS = ['*']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'

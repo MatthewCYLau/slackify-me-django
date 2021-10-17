@@ -14,4 +14,5 @@ COPY . ./
 # Install production dependencies.
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8000
+EXPOSE 8080
+CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8080

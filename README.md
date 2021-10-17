@@ -2,6 +2,8 @@
 
 A Python Django app which turns our plain text messages into emojis
 
+App URL [here](https://slackify-me-django-sxzla7yera-ew.a.run.app/)
+
 ## Installation
 
 Make sure you already have Python and pip installed
@@ -46,9 +48,10 @@ python manage.py runserver # app starts at http://localhost:8000/
 In the project root directory, run this command:
 
 ```bash
-docker build -t slackify-me-django .
-docker run -p 8000:8000 slackify-me-django
-gcloud run deploy
+docker build -t gcr.io/<your_gcp_project_id>/slackify-me-django:latest .
+docker run -p 8000:8000 gcr.io/<your_gcp_project_id>/slackify-me-django:latest
+docker push gcr.io/<your_gcp_project_id>/slackify-me-django:latest
+gcloud run deploy --image=gcr.io/<your_gcp_project_id>/slackify-me-django:latest
 ```
 
 ## Contributing
