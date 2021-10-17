@@ -1,9 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .form import InputMessageForm
 from .models import InputMessage
-from django.http import HttpResponseRedirect
-import requests
-import os
+
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
@@ -21,23 +19,10 @@ def home(request):
 
     if request.method == "POST":
 
-        if 'RDS_HOSTNAME' in os.environ:
-
-            auth_token = os.environ['SLACK_AUTH_TOKEN']
-
-        else:
-            auth_token = ""
-
         output_message = add_emojis(request.POST['body'], 1)
-
-        payload = {'channel': request.POST['channel'], 'text': output_message}
-        hed = {'Authorization': 'Bearer ' + auth_token}
-
-        requests.post("https://slack.com/api/chat.postMessage", data=payload, headers=hed)
 
         inputMessage = InputMessage()
         inputMessage.body = output_message
-        inputMessage.channel = request.POST['channel']
         inputMessage.name = request.POST['name']
         inputMessage.pub_date = timezone.datetime.now()
 
@@ -46,7 +31,8 @@ def home(request):
         elif User.objects.filter(username='default_user').exists():
             inputMessage.user = User.objects.get(username='default_user')
         else:
-            User.objects.create(username='default_user', password = 'Django1234!!')
+            User.objects.create(username='default_user',
+                                password='Django1234!!')
             inputMessage.user = User.objects.get(username='default_user')
 
         inputMessage.save()
@@ -67,6 +53,7 @@ def add_emojis(input_text, magnitude_factor):
 
     return output
 
+
 def dashboard(request):
     messages = InputMessage.objects.filter(user=request.user)
     return render(request, 'message/dashboard.html', {'messages': messages})
@@ -79,7 +66,8 @@ class SignUp(generic.CreateView):
 
     def form_valid(self, form):
         view = super(SignUp, self).form_valid(form)
-        username, password = form.cleaned_data.get('username'), form.cleaned_data.get('password1')
+        username, password = form.cleaned_data.get(
+            'username'), form.cleaned_data.get('password1')
         user = authenticate(username=username, password=password)
         login(self.request, user)
         return view
