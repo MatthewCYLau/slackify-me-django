@@ -18,7 +18,7 @@ script:
 
 addons:
   postgresql: "9.6"
-
+# un-comment to deploy to AWS Elastic Beanstalk through Travis CI
 # deploy:
 #   provider: elasticbeanstalk
 #   access_key_id: $ACCESSKEYID
