@@ -41,6 +41,16 @@ In the project root directory, run this command:
 python manage.py runserver # app starts at http://localhost:8000/
 ```
 
+## Deploy to Cloud Run
+
+In the project root directory, run this command:
+
+```bash
+docker build -t slackify-me-django .
+docker run -p 8000:8000 slackify-me-django
+gcloud run deploy
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
