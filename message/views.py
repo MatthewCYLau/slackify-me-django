@@ -49,7 +49,9 @@ def home(request):
 
 def add_emojis(input_text, magnitude_factor):
 
-    output = ("\U0001f92A" * magnitude_factor)+input_text
+    list_of_emojis = []
+    [list_of_emojis.append("\U0001f92A") for i in input_text]
+    output = " ".join(list_of_emojis)
 
     return output
 
