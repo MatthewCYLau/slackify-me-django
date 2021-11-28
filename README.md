@@ -1,8 +1,10 @@
 # Slackify Me App in Python Django
 
+![cicd cloud run workflow](https://github.com/MatthewCYLau/slackify-me-django/actions/workflows/cicd-cloud-run.yml/badge.svg)
+
 A Python Django app which turns our plain text messages into emojis
 
-App URL [here](https://slackify-me-django-sxzla7yera-ew.a.run.app/)
+App URL [here](https://slackify-me-django-3i2mtbjusq-ew.a.run.app)
 
 ## Installation
 
