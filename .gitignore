@@ -9,12 +9,4 @@ venv
 .idea
 .vscode
 
-### Terraform ###
-# Local .terraform directories
-**/.terraform/*
-
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
-*secret.tfvars
+__pycache__/
