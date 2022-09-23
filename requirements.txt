@@ -21,7 +21,7 @@ idna==2.8
 jmespath==0.9.4
 oauthlib==3.0.1
 Pillow==8.3.2
-protobuf==3.8.0
+protobuf==3.18.3
 pyasn1==0.4.5
 pyasn1-modules==0.2.5
 PyJWT==1.7.1
